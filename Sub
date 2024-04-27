@@ -9,17 +9,20 @@
       {
         "tag": "dns-remote",
         "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct"
+        "address_resolver": "dns-direct",
+        "strategy": "ipv4_only"
       },
       {
         "tag": "dns-trick-direct",
         "address": "https://sky.rethinkdns.com/",
+        "strategy": "ipv4_only",
         "detour": "direct-fragment"
       },
       {
         "tag": "dns-direct",
         "address": "local",
         "address_resolver": "dns-local",
+        "strategy": "ipv4_only",
         "detour": "direct"
       },
       {
@@ -47,16 +50,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.98.0",
         "188.114.99.0",
+        "188.114.98.0",
         "2a06:98c1:3123::",
         "2a06:98c1:3122::",
-        "104.18.203.232",
         "104.18.202.232",
-        "188.114.97.3",
+        "104.18.203.232",
         "188.114.96.3",
-        "2a06:98c1:3120::6",
-        "2a06:98c1:3121::6"
+        "188.114.97.3",
+        "2a06:98c1:3121::6",
+        "2a06:98c1:3120::6"
       ]
     },
     "independent_cache": true
@@ -499,7 +502,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "FMGyLxonzAU_eaOF"
+      "secret": "qsij-cGaf5AuNr7S"
     }
   }
 }
