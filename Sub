@@ -49,14 +49,14 @@
       "sky.rethinkdns.com": [
         "188.114.98.0",
         "188.114.99.0",
-        "2a06:98c1:3122::",
         "2a06:98c1:3123::",
-        "104.18.202.232",
+        "2a06:98c1:3122::",
         "104.18.203.232",
-        "188.114.96.6",
-        "188.114.97.6",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3"
+        "104.18.202.232",
+        "188.114.97.3",
+        "188.114.96.3",
+        "2a06:98c1:3120::6",
+        "2a06:98c1:3121::6"
       ]
     },
     "independent_cache": true
@@ -103,6 +103,7 @@
         "🇸🇪 𝐀𝐳𝐚𝐝𝐢 𝟑\n@azadi_az_inja_migzare § 0",
         "🇦🇺 𝐀𝐳𝐚𝐝𝐢 𝟒\n@azadi_az_inja_migzare § 0",
         "🇦🇺 𝐀𝐳𝐚𝐝𝐢 𝟓\n@azadi_az_inja_migzare § 0",
+        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2ray § 1",
         "🇫🇮 𝐀𝐳𝐚𝐝𝐢 𝟏\n@azadi_az_inja_migzare § 1",
         "🇫🇮 𝐀𝐳𝐚𝐝𝐢 𝟐\n@azadi_az_inja_migzare § 1",
         "🇸🇪 𝐀𝐳𝐚𝐝𝐢 𝟑\n@azadi_az_inja_migzare § 1"
@@ -119,6 +120,7 @@
         "🇸🇪 𝐀𝐳𝐚𝐝𝐢 𝟑\n@azadi_az_inja_migzare § 0",
         "🇦🇺 𝐀𝐳𝐚𝐝𝐢 𝟒\n@azadi_az_inja_migzare § 0",
         "🇦🇺 𝐀𝐳𝐚𝐝𝐢 𝟓\n@azadi_az_inja_migzare § 0",
+        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2ray § 1",
         "🇫🇮 𝐀𝐳𝐚𝐝𝐢 𝟏\n@azadi_az_inja_migzare § 1",
         "🇫🇮 𝐀𝐳𝐚𝐝𝐢 𝟐\n@azadi_az_inja_migzare § 1",
         "🇸🇪 𝐀𝐳𝐚𝐝𝐢 𝟑\n@azadi_az_inja_migzare § 1"
@@ -301,6 +303,39 @@
     },
     {
       "type": "vless",
+      "tag": "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2ray § 1",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-20",
+        "sleep": "0"
+      },
+      "server": "104.17.72.92",
+      "server_port": 443,
+      "uuid": "5bdf790f-0af2-4481-a624-41b66e7e3489",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.ircp.online",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@ln2ray",
+        "headers": {
+          "Host": "cdn.ircp.online"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
       "tag": "🇫🇮 𝐀𝐳𝐚𝐝𝐢 𝟏\n@azadi_az_inja_migzare § 1",
       "tls_fragment": {
         "enabled": true,
@@ -313,6 +348,9 @@
       "tls": {
         "enabled": true,
         "server_name": "simorgh.hideandsurf.com",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -323,9 +361,7 @@
         "path": "/BamdadSepid@Happy_Bam",
         "headers": {
           "Host": "simorgh.hideandsurf.com"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        }
       },
       "packet_encoding": "xudp"
     },
@@ -343,6 +379,9 @@
       "tls": {
         "enabled": true,
         "server_name": "leT-heR-coOK.sEgARo.Tech",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -353,9 +392,7 @@
         "path": "/pool.ntp",
         "headers": {
           "Host": "leT-heR-coOK.sEgARo.Tech"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        }
       },
       "packet_encoding": "xudp"
     },
@@ -373,6 +410,9 @@
       "tls": {
         "enabled": true,
         "server_name": "NIKa.hIdEaNDSuRf.COm",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -383,9 +423,7 @@
         "path": "/@Happy_Bam",
         "headers": {
           "Host": "NIKa.hIdEaNDSuRf.COm"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+        }
       },
       "packet_encoding": "xudp"
     },
@@ -461,7 +499,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "I1h2uzejoyP_sCgm"
+      "secret": "FMGyLxonzAU_eaOF"
     }
   }
 }
