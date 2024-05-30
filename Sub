@@ -42,16 +42,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.97.0",
-        "188.114.96.0",
-        "2a06:98c1:3120::",
-        "2a06:98c1:3121::",
-        "104.18.203.232",
+        "188.114.96.6",
+        "188.114.97.6",
+        "2a06:98c1:3122::",
+        "2a06:98c1:3123::",
         "104.18.202.232",
-        "188.114.96.0",
-        "188.114.97.0",
-        "2a06:98c1:3121::",
-        "2a06:98c1:3120::"
+        "104.18.203.232",
+        "188.114.96.6",
+        "188.114.97.6",
+        "2a06:98c1:3121::6",
+        "2a06:98c1:3120::6"
       ]
     },
     "independent_cache": true
@@ -471,7 +471,7 @@
     {
       "type": "hysteria2",
       "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "83.226.36.112",
+      "server": "85.230.209.10",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -509,7 +509,7 @@
     {
       "type": "shadowtls",
       "tag": "stl-se",
-      "server": "83.226.36.112",
+      "server": "85.230.209.10",
       "server_port": 9443,
       "version": 3,
       "password": "bqmnECAg8mGe4MwsZopppA==",
@@ -1243,7 +1243,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "gJSEUIeTG-E_ea3J"
+      "secret": "LdNwXRp2AIM4PGv5"
     }
   }
 }
