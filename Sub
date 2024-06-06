@@ -9,17 +9,20 @@
       {
         "tag": "dns-remote",
         "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct"
+        "address_resolver": "dns-direct",
+        "strategy": "prefer_ipv6"
       },
       {
         "tag": "dns-trick-direct",
         "address": "https://sky.rethinkdns.com/",
+        "strategy": "prefer_ipv6",
         "detour": "direct-fragment"
       },
       {
         "tag": "dns-direct",
         "address": "8.8.8.8",
         "address_resolver": "dns-local",
+        "strategy": "prefer_ipv6",
         "detour": "direct"
       },
       {
@@ -34,6 +37,20 @@
     ],
     "rules": [
       {
+        "domain": [
+          "gbdgtlocnaz1.daiijannapoleon.fun",
+          "h.88981401.xyz",
+          "semeaz.daiijannapoleon.fun",
+          "fihzaz.daiijannapoleon.fun",
+          "auoraz1.daiijannapoleon.fun",
+          "auoraz2.daiijannapoleon.fun",
+          "arvancloudstatus.ir",
+          "atpqaz.daiijannapoleon.fun",
+          "gbdgtlocnaz2.daiijannapoleon.fun"
+        ],
+        "server": "dns-direct"
+      },
+      {
         "domain": "cp.cloudflare.com",
         "server": "dns-remote",
         "rewrite_ttl": 3000
@@ -42,12 +59,12 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.96.6",
-        "188.114.97.6",
-        "2a06:98c1:3122::",
-        "2a06:98c1:3123::",
-        "104.18.202.232",
-        "104.18.203.232",
+        "188.114.98.0",
+        "188.114.99.0",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3",
+        "104.17.148.22",
+        "104.17.147.22",
         "188.114.96.6",
         "188.114.97.6",
         "2a06:98c1:3121::6",
@@ -81,48 +98,20 @@
       "outbounds": [
         "auto",
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § sstls",
-        "stl-ircp1",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-        "stl-ircp1v6",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § sstls",
-        "stl-ircp2",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-        "stl-ircp2v6",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-se",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-pqat",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-        "stl-pqatv6",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-hzfi",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-        "stl-hzfiv6",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-        "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝟐\n@azadi_az_inja_migzare"
+        "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech"
       ],
       "default": "auto"
     },
@@ -131,57 +120,30 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § sstls",
-        "stl-ircp1",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-        "stl-ircp1v6",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § sstls",
-        "stl-ircp2",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-        "stl-ircp2v6",
         "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-se",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-pqat",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-        "stl-pqatv6",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-        "stl-hzfi",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-        "stl-hzfiv6",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
-        "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
-        "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-        "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-        "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝟐\n@azadi_az_inja_migzare"
+        "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech",
+        "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+        "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+        "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech"
       ],
-      "url": "http://www.google.com/generate_204",
+      "url": "http://cp.cloudflare.com",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
     },
     {
       "type": "hysteria2",
       "tag": "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
-      "server": "193.38.54.48",
+      "domain_strategy": "prefer_ipv6",
+      "server": "h.88981401.xyz",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -203,99 +165,14 @@
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-      "server": "2a09:7c44:0:14::1",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "@ln2ray-5bdf790f-0af2-4481-a624-41b66e7e3489"
-      },
-      "password": "@ln2ray-5bdf790f-0af2-4481-a624-41b66e7e3489",
-      "tls": {
-        "enabled": true,
-        "server_name": "let-him-cook.ircp.online",
-        "alpn": "h3",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "ech": {
-          "enabled": true,
-          "pq_signature_schemes_enabled": true,
-          "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACCc2kqEYGusiYc5fj1smMpQJYQLckpS1bgOaCDLvoiofgAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
-          ]
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏\n@Ln2Ray § sstls",
-      "detour": "stl-ircp1",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "zQnKJKopblAcBRnbNfRfuw==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-ircp1",
-      "server": "193.38.54.48",
-      "server_port": 9443,
-      "version": 3,
-      "password": "5MG6nLaP68GKnd6qmm/90Q==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-      "detour": "stl-ircp1v6",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "zQnKJKopblAcBRnbNfRfuw==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-ircp1v6",
-      "server": "2a09:7c44:0:14::1",
-      "server_port": 9443,
-      "version": 3,
-      "password": "5MG6nLaP68GKnd6qmm/90Q==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § hy2+ech",
-      "server": "37.221.127.169",
+      "domain_strategy": "prefer_ipv6",
+      "server": "h.88981401.xyz",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -317,135 +194,19 @@
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § hy2+ech",
-      "server": "2a09:7c44:0:13::1",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "@ln2ray-5bdf790f-0af2-4481-a624-41b66e7e3489-2"
-      },
-      "password": "@ln2ray-5bdf790f-0af2-4481-a624-41b66e7e3489-2",
-      "tls": {
-        "enabled": true,
-        "server_name": "let-her-cook.ircp.online",
-        "alpn": "h3",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "ech": {
-          "enabled": true,
-          "pq_signature_schemes_enabled": true,
-          "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACDEm4x9dlkKtLblXP7y0ZjKr7g6DdP2WaOgIjI6ujcnTQAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
-          ]
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐\n@Ln2Ray § sstls",
-      "detour": "stl-ircp2",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "EINNHtab6dVjXgpaCSliFg==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-ircp2",
-      "server": "37.221.127.169",
-      "server_port": 9443,
-      "version": 3,
-      "password": "bZvMcepqEMntxa1vkbm4XA==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § sstls",
-      "detour": "stl-ircp2v6",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "EINNHtab6dVjXgpaCSliFg==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-ircp2v6",
-      "server": "2a09:7c44:0:13::1",
-      "server_port": 9443,
-      "version": 3,
-      "password": "bZvMcepqEMntxa1vkbm4XA==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐\n@Ln2Ray § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
       "tls_fragment": {
         "enabled": true,
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "188.114.96.12",
-      "server_port": 443,
-      "uuid": "5bdf790f-0af2-4481-a624-41b66e7e3489",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.ircp.online",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@ln2ray",
-        "headers": {
-          "Host": "cdn.ircp.online"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 𝐈𝐑𝐂𝐏 | 𝟏\u0026𝟐 | 𝐢𝐩𝐯𝟔\n@Ln2Ray § vl+ws+tls+cdn+frag",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
+      "server": "arvancloudstatus.ir",
       "server_port": 443,
       "uuid": "5bdf790f-0af2-4481-a624-41b66e7e3489",
       "tls": {
@@ -470,17 +231,18 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "85.230.209.10",
+      "tag": "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "semeaz.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "mH4pNtUvtJVz"
+        "password": "@azadi_az_inja_migzare"
       },
-      "password": "ONSqhzOs55xn",
+      "password": "zCBVQV9M9YGd",
       "tls": {
         "enabled": true,
-        "server_name": "sahand.hideandsurf.com",
+        "server_name": "sahand.seyed-ali-khamenei-binamous.site",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -489,7 +251,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACBM/7OFwc4Djax1NZ0sUGm0Y2cHVn9IfI7ZhzoeHCMucwAIAAEA",
+            "AFf+DQBTAAAgACDg4EJndExgiJsI56wNbuVMgAV90eAL7cDXrs1g+VSqSAAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -497,48 +259,20 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-      "detour": "stl-se",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "3KkSWyQkv2X2wVrX8tg7wg==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-se",
-      "server": "85.230.209.10",
-      "server_port": 9443,
-      "version": 3,
-      "password": "bqmnECAg8mGe4MwsZopppA==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "tag": "🇸🇪 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
       "tls_fragment": {
         "enabled": true,
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "188.114.96.12",
+      "server": "arvancloudstatus.ir",
       "server_port": 443,
-      "uuid": "81625684-4552-49f8-b1c1-1f14790528c5",
+      "uuid": "29cf96e6-8008-4233-a883-4b5daeb72309",
       "tls": {
         "enabled": true,
-        "server_name": "helloworld.hideandsurf.com",
+        "server_name": "helloworld.seyed-ali-khamenei-binamous.site",
         "alpn": "http/1.1",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -549,57 +283,27 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/@so5-Sher4BaD",
+        "path": "/@azadi_az_inja_migzare",
         "headers": {
-          "Host": "helloworld.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇪 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
-      "server_port": 443,
-      "uuid": "81625684-4552-49f8-b1c1-1f14790528c5",
-      "tls": {
-        "enabled": true,
-        "server_name": "helloworld.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@so5-Sher4BaD",
-        "headers": {
-          "Host": "helloworld.hideandsurf.com"
+          "Host": "helloworld.seyed-ali-khamenei-binamous.site"
         }
       },
       "packet_encoding": "xudp"
     },
     {
       "type": "hysteria2",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "5.181.21.84",
+      "tag": "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "fihzaz.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "Kh4meNeIGetL0stFromIran2024"
+        "password": "tVHUA6na0Cyu"
       },
-      "password": "b947d658-8140-4ea0-ba18-23a6d48788bb",
+      "password": "https://t.me/javidnamanIran",
       "tls": {
         "enabled": true,
-        "server_name": "sabalan.hideandsurf.com",
+        "server_name": "alborz.seyed-ali-khamenei-binamous.site",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -608,7 +312,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACB162hoUp9SqWj/B4TK0Yltr/j7PoqWR8YKyXvjpcZ6UwAIAAEA",
+            "AFf+DQBTAAAgACDFjn9bYsyxCVBoOlDicUgxNykCK9UufM7XhMoot6uDIQAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -616,18 +320,51 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇫🇮 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-20",
+        "sleep": "0"
+      },
+      "server": "arvancloudstatus.ir",
+      "server_port": 443,
+      "uuid": "ba4f3a16-6294-47ef-94b8-1f7ac93c68b9",
+      "tls": {
+        "enabled": true,
+        "server_name": "duckngo.seyed-ali-khamenei-binamous.site",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@azadi_az_inja_migzare",
+        "headers": {
+          "Host": "duckngo.seyed-ali-khamenei-binamous.site"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "2a13:6305:0:6::1",
+      "tag": "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "atpqaz.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "Kh4meNeIGetL0stFromIran2024"
+        "password": "FBrEbtKlW48Z"
       },
-      "password": "b947d658-8140-4ea0-ba18-23a6d48788bb",
+      "password": "@azadi_az_inja_migzare",
       "tls": {
         "enabled": true,
-        "server_name": "sabalan.hideandsurf.com",
+        "server_name": "sabalan.seyed-ali-khamenei-binamous.site",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -636,7 +373,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACB162hoUp9SqWj/B4TK0Yltr/j7PoqWR8YKyXvjpcZ6UwAIAAEA",
+            "AFf+DQBTAAAgACDPkwcped6BMFIzNJOhtAFxKRtW31aVNjMh8TgHuksEfAAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -644,77 +381,20 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-      "detour": "stl-pqat",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "FtzMJr2WbF+nBeWCbTn2Hw==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-pqat",
-      "server": "5.181.21.84",
-      "server_port": 9443,
-      "version": 3,
-      "password": "KAiRsq+DZxuCzukkC1doCQ==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-      "detour": "stl-pqatv6",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "FtzMJr2WbF+nBeWCbTn2Hw==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-pqatv6",
-      "server": "2a13:6305:0:6::1",
-      "server_port": 9443,
-      "version": 3,
-      "password": "KAiRsq+DZxuCzukkC1doCQ==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "tag": "🇦🇹 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
       "tls_fragment": {
         "enabled": true,
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "188.114.96.12",
+      "server": "arvancloudstatus.ir",
       "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
+      "uuid": "4f5f38f2-e659-4901-976b-13fa54544bd6",
       "tls": {
         "enabled": true,
-        "server_name": "pathfinder.hideandsurf.com",
+        "server_name": "pathfinder.seyed-ali-khamenei-binamous.site",
         "alpn": "http/1.1",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -725,57 +405,27 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
+        "path": "/https://t.me/javidnamaniran",
         "headers": {
-          "Host": "pathfinder.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇹 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
-      "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "pathfinder.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
-        "headers": {
-          "Host": "pathfinder.hideandsurf.com"
+          "Host": "pathfinder.seyed-ali-khamenei-binamous.site"
         }
       },
       "packet_encoding": "xudp"
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "37.27.40.21",
+      "tag": "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "gbdgtlocnaz1.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "2X2lDkApzb07"
+        "password": "@azadi_az_inja_migzare"
       },
-      "password": "qeUUaVSyGo+C",
+      "password": "4f5f38f2-e659-4901-976b-13fa54544bd6",
       "tls": {
         "enabled": true,
-        "server_name": "alborz.hideandsurf.com",
+        "server_name": "gbdgtlocnaz1.daiijannapoleon.fun",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -784,7 +434,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACAFJYRCZAKXi0LALj940P/Rk9HyghmQHgA/4/NuM7uCUwAIAAEA",
+            "AFf+DQBTAAAgACDPkwcped6BMFIzNJOhtAFxKRtW31aVNjMh8TgHuksEfAAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -792,18 +442,51 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-20",
+        "sleep": "0"
+      },
+      "server": "arvancloudstatus.ir",
+      "server_port": 443,
+      "uuid": "4f5f38f2-e659-4901-976b-13fa54544bd6",
+      "tls": {
+        "enabled": true,
+        "server_name": "gbdgtlocnaz1.seyed-ali-khamenei-binamous.site",
+        "alpn": "http/1.1",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@azadi_az_inja_migzare",
+        "headers": {
+          "Host": "gbdgtlocnaz1.seyed-ali-khamenei-binamous.site"
+        }
+      },
+      "packet_encoding": "xudp"
+    },
+    {
       "type": "hysteria2",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § hy2+ech",
-      "server": "2a01:4f9:c012:cece::1",
+      "tag": "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "gbdgtlocnaz2.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "2X2lDkApzb07"
+        "password": "@azadi_az_inja_migzare"
       },
-      "password": "qeUUaVSyGo+C",
+      "password": "4f5f38f2-e659-4901-976b-13fa54544bd6",
       "tls": {
         "enabled": true,
-        "server_name": "alborz.hideandsurf.com",
+        "server_name": "gbdgtlocnaz2.daiijannapoleon.fun",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -812,155 +495,7 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACAFJYRCZAKXi0LALj940P/Rk9HyghmQHgA/4/NuM7uCUwAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
-          ]
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § sstls",
-      "detour": "stl-hzfi",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "uf0dRov8wtmLsrGQp8Lv6A==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-hzfi",
-      "server": "37.27.40.21",
-      "server_port": 9443,
-      "version": 3,
-      "password": "aRUUll6QB5N6UYkJLnW4Ag==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § sstls",
-      "detour": "stl-hzfiv6",
-      "server": "",
-      "server_port": 0,
-      "method": "chacha20-ietf-poly1305",
-      "password": "uf0dRov8wtmLsrGQp8Lv6A==",
-      "udp_over_tcp": true
-    },
-    {
-      "type": "shadowtls",
-      "tag": "stl-hzfiv6",
-      "server": "2a01:4f9:c012:cece::1",
-      "server_port": 9443,
-      "version": 3,
-      "password": "aRUUll6QB5N6UYkJLnW4Ag==",
-      "tls": {
-        "enabled": true,
-        "server_name": "blogs.windows.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "188.114.96.12",
-      "server_port": 443,
-      "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
-      "tls": {
-        "enabled": true,
-        "server_name": "duckngo.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fJ4A1dBV",
-        "headers": {
-          "Host": "duckngo.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
-      "server_port": 443,
-      "uuid": "323f3148-db47-4f7c-a26e-50a53093c261",
-      "tls": {
-        "enabled": true,
-        "server_name": "duckngo.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fJ4A1dBV",
-        "headers": {
-          "Host": "duckngo.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-      "server": "188.166.43.138",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "Kh4meNeIGetL0stFromIran2024"
-      },
-      "password": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "dgtlocn-nl.hideandsurf.com",
-        "alpn": "h3",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "ech": {
-          "enabled": true,
-          "pq_signature_schemes_enabled": true,
-          "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACBi/mj/3n7AqtnENy7dYtjEAIc21UWexNzeTtTEVoarAQAIAAEA",
+            "AFf+DQBTAAAgACDPkwcped6BMFIzNJOhtAFxKRtW31aVNjMh8TgHuksEfAAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -969,18 +504,19 @@
     },
     {
       "type": "vless",
-      "tag": "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
+      "tag": "🇬🇧 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "domain_strategy": "prefer_ipv6",
       "tls_fragment": {
         "enabled": true,
         "size": "10-20",
         "sleep": "0"
       },
-      "server": "188.114.96.12",
+      "server": "arvancloudstatus.ir",
       "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
+      "uuid": "4f5f38f2-e659-4901-976b-13fa54544bd6",
       "tls": {
         "enabled": true,
-        "server_name": "dgtlocn-nl-cdn.hideandsurf.com",
+        "server_name": "gbdgtlocnaz2.seyed-ali-khamenei-binamous.site",
         "alpn": "http/1.1",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -991,138 +527,18 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
+        "path": "/@azadi_az_inja_migzare",
         "headers": {
-          "Host": "dgtlocn-nl-cdn.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇱 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
-      "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "dgtlocn-nl-cdn.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
-        "headers": {
-          "Host": "dgtlocn-nl-cdn.hideandsurf.com"
+          "Host": "gbdgtlocnaz2.seyed-ali-khamenei-binamous.site"
         }
       },
       "packet_encoding": "xudp"
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-      "server": "24.199.84.113",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "Kh4meNeIGetL0stFromIran2024"
-      },
-      "password": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "freedom.hideandsurf.com",
-        "alpn": "h3",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "ech": {
-          "enabled": true,
-          "pq_signature_schemes_enabled": true,
-          "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACD1ixEyxjexM4m9OTmxqKaX2mYZdyj9RtrbnOqit1mABQAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
-          ]
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § 0",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "188.114.96.12",
-      "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "iran.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
-        "headers": {
-          "Host": "iran.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝐢𝐩𝐯𝟔\n@azadi_az_inja_migzare",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "2a06:98c1:3121::c",
-      "server_port": 443,
-      "uuid": "b947d658-8140-4ea0-ba18-23a6d48788bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "iran.hideandsurf.com",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Kh4meNeIGetL0stFromIran2024",
-        "headers": {
-          "Host": "iran.hideandsurf.com"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare",
-      "server": "152.69.179.155",
+      "tag": "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "auoraz1.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
@@ -1149,8 +565,9 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕 | 𝟐\n@azadi_az_inja_migzare",
-      "server": "158.179.18.187",
+      "tag": "🇦🇺 𝐒𝐞𝐲𝐞𝐝 𝐀𝐥𝐢 𝐤𝐡𝐚𝐦𝐞𝐧𝐞𝐢 𝐁𝐢𝐧𝐚𝐦𝐨𝐮𝐬 | 𝟐\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "auoraz2.daiijannapoleon.fun",
       "server_port": 443,
       "up_mbps": 10000,
       "down_mbps": 10000,
@@ -1243,7 +660,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "LdNwXRp2AIM4PGv5"
+      "secret": "vHZ_IYq9gmIYwn_f"
     }
   }
 }
