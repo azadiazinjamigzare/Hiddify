@@ -38,9 +38,9 @@
     "rules": [
       {
         "domain": [
-          "fihzaz.daiijannapoleon.fun",
           "atpqaz.daiijannapoleon.fun",
-          "semeaz.daiijannapoleon.fun",
+          "auoraz.daiijannapoleon.fun",
+          "all-in.daiijannapoleon.fun",
           "h.88981401.xyz",
           "arvancloudstatus.ir"
         ],
@@ -55,16 +55,16 @@
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "2a06:98c1:3123::",
-        "2a06:98c1:3122::",
-        "188.114.99.0",
         "188.114.98.0",
-        "104.17.147.22",
+        "188.114.99.0",
+        "2a06:98c1:3122::",
+        "2a06:98c1:3123::",
         "104.17.148.22",
-        "2a06:98c1:3121::3",
-        "2a06:98c1:3120::3",
+        "104.17.147.22",
+        "188.114.97.3",
         "188.114.96.3",
-        "188.114.97.3"
+        "2a06:98c1:3120::6",
+        "2a06:98c1:3121::6"
       ]
     },
     "independent_cache": true
@@ -106,12 +106,11 @@
         "auto",
         "🇳🇱NL 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱NL 𝐈𝐑𝐂𝐏\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
         "🇦🇹AT 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
         "🇦🇹AT 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag"
+        "🇦🇺AU 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag"
       ],
       "default": "auto"
     },
@@ -121,12 +120,11 @@
       "outbounds": [
         "🇳🇱NL 𝐈𝐑𝐂𝐏\n@Ln2Ray § hy2+ech",
         "🇳🇱NL 𝐈𝐑𝐂𝐏\n@Ln2Ray § vl+ws+tls+cdn+frag",
-        "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
         "🇦🇹AT 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
         "🇦🇹AT 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-        "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-        "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag"
+        "🇦🇺AU 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+        "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag"
       ],
       "url": "http://www.google.com/generate_204",
       "interval": "10m0s",
@@ -195,67 +193,6 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
-      "domain_strategy": "prefer_ipv6",
-      "server": "fihzaz.daiijannapoleon.fun",
-      "server_port": 443,
-      "obfs": {
-        "type": "salamander",
-        "password": "tVHUA6na0Cyu"
-      },
-      "password": "https://t.me/javidnamanIran",
-      "tls": {
-        "enabled": true,
-        "server_name": "alborz.seyed-ali-khamenei-binamous.site",
-        "alpn": "h3",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "ech": {
-          "enabled": true,
-          "pq_signature_schemes_enabled": true,
-          "config": [
-            "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACDFjn9bYsyxCVBoOlDicUgxNykCK9UufM7XhMoot6uDIQAIAAEA",
-            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
-            "-----END ECH CONFIGS-----"
-          ]
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮FI 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
-      "domain_strategy": "prefer_ipv6",
-      "tls_fragment": {
-        "enabled": true,
-        "size": "10-20",
-        "sleep": "0"
-      },
-      "server": "arvancloudstatus.ir",
-      "server_port": 443,
-      "uuid": "ba4f3a16-6294-47ef-94b8-1f7ac93c68b9",
-      "tls": {
-        "enabled": true,
-        "server_name": "duckngo.seyed-ali-khamenei-binamous.site",
-        "alpn": "http/1.1",
-        "min_version": "1.3",
-        "max_version": "1.3",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/@azadi_az_inja_migzare",
-        "headers": {
-          "Host": "duckngo.seyed-ali-khamenei-binamous.site"
-        }
-      },
-      "packet_encoding": "xudp"
-    },
-    {
-      "type": "hysteria2",
       "tag": "🇦🇹AT 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
       "domain_strategy": "prefer_ipv6",
       "server": "atpqaz.daiijannapoleon.fun",
@@ -317,18 +254,18 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+      "tag": "🇦🇺AU 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
       "domain_strategy": "prefer_ipv6",
-      "server": "semeaz.daiijannapoleon.fun",
+      "server": "auoraz.daiijannapoleon.fun",
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "@azadi_az_inja_migzare"
+        "password": "azadi1"
       },
-      "password": "zCBVQV9M9YGd",
+      "password": "azadi1",
       "tls": {
         "enabled": true,
-        "server_name": "sahand.seyed-ali-khamenei-binamous.site",
+        "server_name": "azadi1.dgi000.store",
         "alpn": "h3",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -337,7 +274,36 @@
           "pq_signature_schemes_enabled": true,
           "config": [
             "-----BEGIN ECH CONFIGS-----",
-            "AFf+DQBTAAAgACDg4EJndExgiJsI56wNbuVMgAV90eAL7cDXrs1g+VSqSAAIAAEA",
+            "AFf+DQBTAAAgACB4u436hfAkDe/FpuMFekdb9tO3/BF/kP6sVFgZpiyJVQAIAAEA",
+            "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
+            "-----END ECH CONFIGS-----"
+          ]
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech",
+      "domain_strategy": "prefer_ipv6",
+      "server": "all-in.daiijannapoleon.fun",
+      "server_port": 443,
+      "obfs": {
+        "type": "salamander",
+        "password": "@azadi_az_inja_migzare-29cf96e6-8008-4233-a883-4b5daeb72309"
+      },
+      "password": "@azadi_az_inja_migzare-29cf96e6-8008-4233-a883-4b5daeb72309",
+      "tls": {
+        "enabled": true,
+        "server_name": "all-in.seyed-ali-khamenei-binamous.site",
+        "alpn": "h3",
+        "min_version": "1.3",
+        "max_version": "1.3",
+        "ech": {
+          "enabled": true,
+          "pq_signature_schemes_enabled": true,
+          "config": [
+            "-----BEGIN ECH CONFIGS-----",
+            "AFf+DQBTAAAgACDvMP0oe54OZPicZE/p+nkwrcMOAeWte99Ye2i7BbTwHgAIAAEA",
             "AQABAAMAIFstLXBxLXNpZ25hdHVyZS1zY2hlbWVzLWVuYWJsZWRdAAA=",
             "-----END ECH CONFIGS-----"
           ]
@@ -346,7 +312,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇪SE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
+      "tag": "🇸🇪🇫🇮🇩🇪SE,FI,DE 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
       "domain_strategy": "prefer_ipv6",
       "tls_fragment": {
         "enabled": true,
@@ -358,7 +324,7 @@
       "uuid": "29cf96e6-8008-4233-a883-4b5daeb72309",
       "tls": {
         "enabled": true,
-        "server_name": "helloworld.seyed-ali-khamenei-binamous.site",
+        "server_name": "all-in-cdn.seyed-ali-khamenei-binamous.site",
         "alpn": "http/1.1",
         "min_version": "1.3",
         "max_version": "1.3",
@@ -371,10 +337,8 @@
         "type": "ws",
         "path": "/@azadi_az_inja_migzare",
         "headers": {
-          "Host": "helloworld.seyed-ali-khamenei-binamous.site"
-        },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
+          "Host": "all-in-cdn.seyed-ali-khamenei-binamous.site"
+        }
       },
       "packet_encoding": "xudp"
     },
@@ -444,7 +408,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "C_6EDB8G9uUnvIVg"
+      "secret": "EY6muHd03fBXwsEh"
     }
   }
 }
