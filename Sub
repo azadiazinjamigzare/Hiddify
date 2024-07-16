@@ -9,20 +9,17 @@
       {
         "tag": "dns-remote",
         "address": "https://8.8.8.8/dns-query",
-        "address_resolver": "dns-direct",
-        "strategy": "prefer_ipv6"
+        "address_resolver": "dns-direct"
       },
       {
         "tag": "dns-trick-direct",
         "address": "https://sky.rethinkdns.com/",
-        "strategy": "prefer_ipv6",
         "detour": "direct-fragment"
       },
       {
         "tag": "dns-direct",
         "address": "8.8.8.8",
         "address_resolver": "dns-local",
-        "strategy": "prefer_ipv6",
         "detour": "direct"
       },
       {
@@ -38,10 +35,10 @@
     "rules": [
       {
         "domain": [
+          "all-in.daiijannapoleon.fun",
           "azadi2.dgi000.store",
           "h.88981401.xyz",
-          "arvancloudstatus.ir",
-          "all-in.daiijannapoleon.fun"
+          "arvancloudstatus.ir"
         ],
         "server": "dns-direct"
       },
@@ -49,26 +46,45 @@
         "domain": "cp.cloudflare.com",
         "server": "dns-remote",
         "rewrite_ttl": 3000
+      },
+      {
+        "rule_set": [
+          "geoip-",
+          "geosite-"
+        ],
+        "server": "dns-direct"
       }
     ],
     "final": "dns-remote",
     "static_ips": {
       "sky.rethinkdns.com": [
-        "188.114.97.6",
-        "188.114.96.6",
-        "2a06:98c1:3121::6",
-        "2a06:98c1:3120::6",
-        "104.17.148.22",
+        "2a06:98c1:3121::3",
+        "2a06:98c1:3120::3",
+        "188.114.99.0",
+        "188.114.98.0",
         "104.17.147.22",
-        "188.114.96.6",
-        "188.114.97.6",
+        "104.17.148.22",
+        "2a06:98c1:3120::6",
         "2a06:98c1:3121::6",
-        "2a06:98c1:3120::6"
+        "188.114.97.3",
+        "188.114.96.3"
       ]
     },
     "independent_cache": true
   },
   "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
     {
       "type": "mixed",
       "tag": "mixed-in",
@@ -108,7 +124,7 @@
         "🇩🇪🇸🇪🇫🇮 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § vl+ws+tls+cdn+frag",
         "🇦🇺 𝐅𝐮𝐜𝐤 𝐒𝐞𝐝𝐢𝐭𝐢𝐨𝐧 𝐨𝐟 𝟏𝟑𝟓𝟕\n@azadi_az_inja_migzare § hy2+ech"
       ],
-      "url": "http://www.google.com/generate_204",
+      "url": "http://www.apple.com/library/test/success.html",
       "interval": "10m0s",
       "idle_timeout": "1h40m0s"
     },
@@ -181,9 +197,9 @@
       "server_port": 443,
       "obfs": {
         "type": "salamander",
-        "password": "@azadi_az_inja_migzare-29cf96e6-8008-4233-a883-4b5daeb72309"
+        "password": "@JavidnamanIran-29cf96e6-8008-4233-a883-4b5daeb72309"
       },
-      "password": "@azadi_az_inja_migzare-29cf96e6-8008-4233-a883-4b5daeb72309",
+      "password": "@JavidnamanIran-29cf96e6-8008-4233-a883-4b5daeb72309",
       "tls": {
         "enabled": true,
         "server_name": "all-in.seyed-ali-khamenei-binamous.site",
@@ -227,7 +243,7 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/@azadi_az_inja_migzare",
+        "path": "/@JavidnamanIran",
         "headers": {
           "Host": "all-in-cdn.seyed-ali-khamenei-binamous.site"
         }
@@ -291,13 +307,14 @@
     }
   ],
   "route": {
-    "geoip": {
-      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
-    },
-    "geosite": {
-      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
-    },
     "rules": [
+      {
+        "rule_set": [
+          "geoip-",
+          "geosite-"
+        ],
+        "outbound": "direct"
+      },
       {
         "inbound": "dns-in",
         "outbound": "dns-out"
@@ -319,6 +336,22 @@
         "outbound": "bypass"
       }
     ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "geoip-",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geoip-.srs",
+        "update_interval": "120h0m0s"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/hiddify/hiddify-geo/rule-set/country/geosite-.srs",
+        "update_interval": "120h0m0s"
+      }
+    ],
     "final": "select",
     "auto_detect_interface": true,
     "override_android_vpn": true
@@ -330,7 +363,7 @@
     },
     "clash_api": {
       "external_controller": "127.0.0.1:6756",
-      "secret": "1QhX1NhkNdl1FJVG"
+      "secret": "3db5S9dQkTbmkmrG"
     }
   }
 }
